@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.header{
+.head{
     background-image:radial-gradient(224.24% 668.5% at 14.41% -14.14%, rgba(0,0,0,0.57) 44.5%, rgba(255,255,255,0) 67.11%) ,url("./Rectangle10.png");
     background-repeat: no-repeat;
     background-size: 100% 141%;

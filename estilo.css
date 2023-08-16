@@ -20,7 +20,7 @@
     line-height: 150%;
 }
 
-#date{
+.date{
     display: inline;
     width: 208px;
     height: 34px;
@@ -32,7 +32,76 @@
     background: rgba(255, 255, 255, 0.75);
 }
 
-#date2{
-    
+.card{
+    height: 21.83vw;
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    border-radius: 1rem;
+    color: #fff;
+    font-size: 0.75rem;
+    overflow: hidden;
+    justify-content: flex-end;
 }
 
+#bodyPage{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.2rem;
+    row-gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.hotel-image{
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+    position: absolute;
+    z-index: 1
+}
+
+.prices{
+    display: flex;
+    width: 208px;
+    height: 34px;
+    padding: 4px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.inp{
+    display: flex;
+    flex-direction: row;
+    padding: 24px;
+    gap: 24px;
+}
+
+#limp{
+    display: flex;
+    width: 97px;
+    height: 34px;
+    padding: 9px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: 2px solid #FFF;
+    background: rgba(0, 0, 0, 0.88);
+}
+
+.hotel-names{
+    display: flex;
+    width: 660px;
+    height: 412px;
+    padding: 31px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    border-radius: 16px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.78) 70.00%), url(<path-to-image>), lightgray 50% / cover no-repeat, #FFF;
+}

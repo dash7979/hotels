@@ -58,7 +58,7 @@
     width: 100%;
     border-radius: 1rem;
     position: absolute;
-    z-index: 1
+    z-index: -1
 }
 
 .prices{
@@ -104,4 +104,16 @@
     align-items: flex-start;
     border-radius: 16px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.78) 70.00%), url(<path-to-image>), lightgray 50% / cover no-repeat, #FFF;
+}
+
+.val{
+    display: flex;
+    width: 208px;
+    height: 34px;
+    padding: 4px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.75);
 }

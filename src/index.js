@@ -19,14 +19,18 @@ import { consultarHoteles } from "./hoteles.js";
 
 const buttonConsulta = document.getElementById("limp");
 const main = document.querySelector("#bodyPage");
+const inputPrice = document.querySelector(".val");
+const dateIn = document.querySelector(".dateIn");
+const dateOut = document.querySelector(".dateOut");
 
-const showHotels = async () => {
     const response = await consultarHoteles()
     const data = await response.json();
-    console.log(data)
 
+const showHotels = async (hoteles) => {
 
-    data.forEach((hotel) => {
+    main.innerHTML = "";
+
+    hoteles.forEach((hotel) => {
         const cardHotel = document.createElement("div");
         cardHotel.className = "card";
         main.appendChild(cardHotel);
@@ -41,11 +45,37 @@ const showHotels = async () => {
         nombreHotel.innerText = hotel.name;
         nombreHotel.className = "hotel-names"
         cardHotel.appendChild(nombreHotel);
+
+        const country = document.createElement("p");
+        country.innerHTML = hotel.country;
+        country.className = "hotelCountry";
+        cardHotel.appendChild(country);
     });
 };
 
-showHotels();
+showHotels(data);
 
+const filterPrice = () =>{
+    let precioHotel = data.filter(hotel => hotel.price == inputPrice.value)
+    showHotels(precioHotel);
+} 
 
+const datesFilter = () =>{
+    const inputsDisponibles = new Date(dateOut.value).getTime() - new Date(dateIn.value).getTime();
+    let filtroDias = data.filter(hotel => {
+        const diasDisponibles = hotel.availabilityTo - hotel.availabilityFrom
+        return inputsDisponibles <= diasDisponibles;
 
+    })
+    if(filtroDias.length > 0){
+        showHotels(filtroDias);
+    } else{
+        main.innerHTML = "No se encuentran hoteles, utilice otro filtro"
+    }
+}
+
+inputPrice.addEventListener("change" , filterPrice);
+
+dateIn.addEventListener("change" , datesFilter);
+dateOut.addEventListener("change" , datesFilter);
 

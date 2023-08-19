@@ -117,3 +117,24 @@
     flex-shrink: 0;
     background: rgba(255, 255, 255, 0.75);
 }
+
+.search{
+    color: #FFF;
+    font-family: Dancing Script;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 72px */
+}
+
+.eco{
+    width: 1116px;
+    height: 26px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 36px */
+}

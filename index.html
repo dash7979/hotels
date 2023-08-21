@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookIt!!</title>
+    <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+    <header class="head">
+        <img class="banner"/>
+        <h1 class="nombrePagina">Book it!</h1>
+        <section class="inp">
+            <input type="date" class="dateIn"/>
+            <input type="date" class="dateOut"/>
+            <select name="country" class="prices">
+                <option value="All">All countries</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Brazil">Brazil</option>
+                <option value="Chile">Chile</option>
+                <option value="Uruguay">Uruguay</option>
+            </select>
+            <select name="cost" class="val">
+                <option value="1">$</option>
+                <option value="2">$$</option>
+                <option value="3">$$$</option>
+                <option value="4">$$$$</option>
+            </select>
+            <button id="limp">clear</button>
+        </section>
+        <p class="search">Que podemos buscar para ti...</p><br><br>
+        <p class="eco">Hoteles económicos del 11 de febrero de 2023 al 14 de febrero de 2023 en Argentina</p>
+    </header>
+    <main id="bodyPage">
+
+    </main>
+    <script type="module" src="./src/index.js"></script>
+</body>
+</html>
